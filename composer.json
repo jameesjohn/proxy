@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Webong\\WebProxy\\": "src/"
+            "Webong\\Proxy\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Webong\\WebProxy\\Tests\\": "tests/"
+            "Webong\\Proxy\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Webong\\WebProxy\\WebProxyServiceProvider"
+                "Webong\\Proxy\\WebProxyServiceProvider"
             ]
         }
     },

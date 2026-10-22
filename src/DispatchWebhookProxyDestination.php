@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\WebhookEvent;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\Contracts\EndpointProvider;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
-use Webong\WebProxy\Jobs\ForwardWebhookJob;
+use Webong\Proxy\Contracts\WebhookEvent;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\Contracts\EndpointProvider;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Jobs\ForwardWebhookJob;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use RuntimeException;
 use Throwable;

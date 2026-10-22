@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Jobs;
+namespace Webong\Proxy\Jobs;
 
-use Webong\WebProxy\Headers;
-use Webong\WebProxy\Models\WebProxyCall;
-use Webong\WebProxy\WebProxy;
-use Webong\WebProxy\WebProxyRegistryManager;
-use Webong\WebProxy\WebProxyChannelManager;
+use Webong\Proxy\Headers;
+use Webong\Proxy\Models\WebProxyCall;
+use Webong\Proxy\WebProxy;
+use Webong\Proxy\WebProxyRegistryManager;
+use Webong\Proxy\WebProxyChannelManager;
 use RuntimeException;
 use Spatie\WebhookClient\Jobs\ProcessWebhookJob as BaseProcessWebhookJob;
 use Spatie\WebhookClient\Models\WebhookCall;

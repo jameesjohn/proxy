@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
-use Webong\WebProxy\WebhookProxyDelivery;
+use Webong\Proxy\WebhookProxyDelivery;
 
 interface WebhookEvent
 {

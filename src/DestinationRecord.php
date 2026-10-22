@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 
 final readonly class DestinationRecord
 {

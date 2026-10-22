@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use RuntimeException;
-use Webong\WebProxy\Console\Commands\DiscoverWebProxyCommand;
+use Webong\Proxy\Console\Commands\DiscoverWebProxyCommand;
 
 class WebProxyServiceProvider extends ServiceProvider
 {

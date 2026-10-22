@@ -11,7 +11,7 @@ outbound profiles for clients such as Guzzle.
 composer require webong/proxy
 ```
 
-Laravel discovers `Webong\WebProxy\WebProxyServiceProvider` automatically.
+Laravel discovers `Webong\Proxy\WebProxyServiceProvider` automatically.
 Publish the package configuration and normal migrations, then migrate:
 
 ```bash
@@ -57,8 +57,8 @@ the stable public identity, while `client` selects the webhook router that
 handles incoming work.
 
 ```php
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\EndpointRegistry;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\EndpointRegistry;
 
 $endpoint = app(EndpointRegistry::class)->ensure(new EndpointDefinition(
     client: 'partner-webhooks',
@@ -79,8 +79,8 @@ Attach destinations when an inbound webhook route should dispatch to an HTTP
 request, event, or job:
 
 ```php
-use Webong\WebProxy\DestinationDefinition;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\DestinationDefinition;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 
 $endpoint->attach(new DestinationDefinition(
     ownerId: 'account-123',
@@ -105,8 +105,8 @@ They are not global configuration entries. This lets each endpoint have its
 own egress identity and keeps profile credentials in the registry store.
 
 ```php
-use Webong\WebProxy\GuzzleClientFactory;
-use Webong\WebProxy\ProfileDefinition;
+use Webong\Proxy\GuzzleClientFactory;
+use Webong\Proxy\ProfileDefinition;
 
 $endpoint->registerProfile(new ProfileDefinition(
     name: 'partner-api',

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-use Webong\WebProxy\DestinationRecord;
-use Webong\WebProxy\DestinationRegistry;
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\EndpointRecord;
-use Webong\WebProxy\EnsureEndpoint;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Models\WebProxyEndpoint;
-use Webong\WebProxy\Models\WebProxyEndpointRegistration;
-use Webong\WebProxy\Models\ProxyProfile;
-use Webong\WebProxy\Tests\Support\WebhookFixtures;
+use Webong\Proxy\DestinationRecord;
+use Webong\Proxy\DestinationRegistry;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\EndpointRecord;
+use Webong\Proxy\EnsureEndpoint;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Models\WebProxyEndpoint;
+use Webong\Proxy\Models\WebProxyEndpointRegistration;
+use Webong\Proxy\Models\ProxyProfile;
+use Webong\Proxy\Tests\Support\WebhookFixtures;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 

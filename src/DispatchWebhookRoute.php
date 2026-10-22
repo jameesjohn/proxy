@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\EndpointProvider;
+use Webong\Proxy\Contracts\EndpointProvider;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
 

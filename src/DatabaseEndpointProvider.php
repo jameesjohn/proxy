@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\EndpointProvider;
-use Webong\WebProxy\Models\WebProxyEndpoint;
-use Webong\WebProxy\Models\WebProxyEndpointRegistration;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Models\ProxyProfile;
+use Webong\Proxy\Contracts\EndpointProvider;
+use Webong\Proxy\Models\WebProxyEndpoint;
+use Webong\Proxy\Models\WebProxyEndpointRegistration;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Models\ProxyProfile;
 use Closure;
 use Throwable;
 use Illuminate\Support\Collection;

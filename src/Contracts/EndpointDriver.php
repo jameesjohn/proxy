@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\ProvisionedEndpoint;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\ProvisionedEndpoint;
 
 interface EndpointDriver
 {

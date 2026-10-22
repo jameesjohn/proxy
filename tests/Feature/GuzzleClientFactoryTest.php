@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use GuzzleHttp\ClientInterface;
-use Webong\WebProxy\GuzzleClientFactory;
-use Webong\WebProxy\ProfileDefinition;
-use Webong\WebProxy\Tests\Support\WebhookFixtures;
+use Webong\Proxy\GuzzleClientFactory;
+use Webong\Proxy\ProfileDefinition;
+use Webong\Proxy\Tests\Support\WebhookFixtures;
 
 it('creates a Guzzle client from a named endpoint profile', function (): void {
     $endpoint = WebhookFixtures::endpoint();

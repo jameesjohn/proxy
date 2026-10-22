@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Tests\Support;
+namespace Webong\Proxy\Tests\Support;
 
 use Illuminate\Support\Str;
-use Webong\WebProxy\DestinationDefinition;
-use Webong\WebProxy\DestinationRecord;
-use Webong\WebProxy\Endpoint;
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\EnsureEndpoint;
+use Webong\Proxy\DestinationDefinition;
+use Webong\Proxy\DestinationRecord;
+use Webong\Proxy\Endpoint;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\EnsureEndpoint;
 
 final class WebhookFixtures
 {

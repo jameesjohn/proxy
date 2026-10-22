@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-use Webong\WebProxy\EndpointUrlGenerator;
-use Webong\WebProxy\Tests\Support\TestWebhookContextProvider;
-use Webong\WebProxy\WebhookContext;
+use Webong\Proxy\EndpointUrlGenerator;
+use Webong\Proxy\Tests\Support\TestWebhookContextProvider;
+use Webong\Proxy\WebhookContext;
 
 it('uses a provided path template to build a callback URL', function (): void {
     config()->set('proxy.base_url', 'https://service.example.test');

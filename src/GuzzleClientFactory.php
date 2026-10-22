@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

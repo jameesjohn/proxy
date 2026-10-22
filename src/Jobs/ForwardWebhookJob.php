@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Jobs;
+namespace Webong\Proxy\Jobs;
 
-use Webong\WebProxy\Events\WebhookDeliveryFailed;
-use Webong\WebProxy\Events\WebhookDeliverySucceeded;
-use Webong\WebProxy\Contracts\EndpointProvider;
-use Webong\WebProxy\WebhookProxyDelivery;
-use Webong\WebProxy\WebProxy;
-use Webong\WebProxy\WebProxyRegistryManager;
+use Webong\Proxy\Events\WebhookDeliveryFailed;
+use Webong\Proxy\Events\WebhookDeliverySucceeded;
+use Webong\Proxy\Contracts\EndpointProvider;
+use Webong\Proxy\WebhookProxyDelivery;
+use Webong\Proxy\WebProxy;
+use Webong\Proxy\WebProxyRegistryManager;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\Log;

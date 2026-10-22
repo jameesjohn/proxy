@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use Closure;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Facades\Context;
-use Webong\WebProxy\Contracts\WebhookContextProvider;
+use Webong\Proxy\Contracts\WebhookContextProvider;
 
 /**
  * Resolves the webhook proxy context from the owner key supplied by the host

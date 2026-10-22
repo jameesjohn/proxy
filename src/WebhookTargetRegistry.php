@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use InvalidArgumentException;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 
 final class WebhookTargetRegistry
 {

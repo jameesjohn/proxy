@@ -5,14 +5,14 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Event;
 use Spatie\WebhookServer\CallWebhookJob;
-use Webong\WebProxy\Events\WebhookDeliveryFailed;
-use Webong\WebProxy\Events\WebhookDeliverySucceeded;
-use Webong\WebProxy\Headers;
-use Webong\WebProxy\Jobs\ForwardWebhookJob;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Tests\Support\WebhookFixtures;
-use Webong\WebProxy\WebProxy;
-use Webong\WebProxy\WebProxyRegistryManager;
+use Webong\Proxy\Events\WebhookDeliveryFailed;
+use Webong\Proxy\Events\WebhookDeliverySucceeded;
+use Webong\Proxy\Headers;
+use Webong\Proxy\Jobs\ForwardWebhookJob;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Tests\Support\WebhookFixtures;
+use Webong\Proxy\WebProxy;
+use Webong\Proxy\WebProxyRegistryManager;
 
 it('signs request deliveries and reports success', function (): void {
     $endpoint = WebhookFixtures::endpoint(externalId: 'signed-delivery');

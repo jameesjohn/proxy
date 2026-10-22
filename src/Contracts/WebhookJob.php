@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Webong\WebProxy\WebhookProxyDelivery;
+use Webong\Proxy\WebhookProxyDelivery;
 
 interface WebhookJob extends ShouldQueue
 {

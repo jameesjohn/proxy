@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
-use Webong\WebProxy\WebhookExecutionContextPayload;
+use Webong\Proxy\WebhookExecutionContextPayload;
 
 /**
  * Resolves the webhook proxy context for the current execution scope on

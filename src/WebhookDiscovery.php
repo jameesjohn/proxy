@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use ReflectionClass;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use RuntimeException;
-use Webong\WebProxy\Attributes\WebhookRouter;
-use Webong\WebProxy\Attributes\WebhookTarget;
-use Webong\WebProxy\Contracts\Router;
-use Webong\WebProxy\Contracts\WebhookEvent;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Attributes\WebhookRouter;
+use Webong\Proxy\Attributes\WebhookTarget;
+use Webong\Proxy\Contracts\Router;
+use Webong\Proxy\Contracts\WebhookEvent;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 
 final class WebhookDiscovery
 {
