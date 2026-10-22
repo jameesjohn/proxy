@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Models;
+namespace Webong\Proxy\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
@@ -14,8 +14,6 @@ use Illuminate\Database\Eloquent\Model;
 class WebProxyEndpointRegistration extends Model
 {
     use HasUuids;
-
-    protected $table = 'web_proxy_endpoint_registrations';
 
     protected $fillable = [
         'owner_id',
@@ -36,5 +34,10 @@ class WebProxyEndpointRegistration extends Model
             'is_active' => 'boolean',
             'metadata' => 'array',
         ];
+    }
+
+    public function getTable(): string
+    {
+        return (string) config('proxy.tables.endpoint_registrations', 'endpoint_registrations');
     }
 }

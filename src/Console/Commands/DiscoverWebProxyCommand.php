@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Console\Commands;
+namespace Webong\Proxy\Console\Commands;
 
 use Illuminate\Console\Command;
-use Webong\WebProxy\WebhookDiscovery;
+use Webong\Proxy\WebhookDiscovery;
 
 final class DiscoverWebProxyCommand extends Command
 {

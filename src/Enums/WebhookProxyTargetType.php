@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Enums;
+namespace Webong\Proxy\Enums;
 
 enum WebhookProxyTargetType: string
 {

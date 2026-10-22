@@ -2,16 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
 use Illuminate\Support\Collection;
-use Webong\WebProxy\Endpoint;
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\DestinationDefinition;
-use Webong\WebProxy\DestinationRecord;
-use Webong\WebProxy\EndpointRecord;
-use Webong\WebProxy\ProvisionedEndpoint;
-use Webong\WebProxy\WebhookRoute;
+use Webong\Proxy\Endpoint;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\DestinationDefinition;
+use Webong\Proxy\DestinationRecord;
+use Webong\Proxy\EndpointRecord;
+use Webong\Proxy\ProvisionedEndpoint;
+use Webong\Proxy\ProfileDefinition;
+use Webong\Proxy\ProfileRecord;
+use Webong\Proxy\WebhookRoute;
 
 interface EndpointProvider extends ExecutionContext
 {
@@ -35,6 +37,10 @@ interface EndpointProvider extends ExecutionContext
     public function registryForId(string $id): ?string;
 
     public function attach(EndpointRecord $endpoint, DestinationDefinition $definition): DestinationRecord;
+
+    public function registerProfile(EndpointRecord $endpoint, ProfileDefinition $definition): ProfileRecord;
+
+    public function profile(EndpointRecord $endpoint, string $name): ?ProfileRecord;
 
     /** @return Collection<int, DestinationRecord> */
     public function destinationsFor(EndpointRecord $endpoint, WebhookRoute $route): Collection;

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Tests\Support;
+namespace Webong\Proxy\Tests\Support;
 
-use Webong\WebProxy\Contracts\WebhookContextProvider;
-use Webong\WebProxy\WebhookExecutionContextPayload;
+use Webong\Proxy\Contracts\WebhookContextProvider;
+use Webong\Proxy\WebhookExecutionContextPayload;
 
 final class TestWebhookContextProvider implements WebhookContextProvider
 {

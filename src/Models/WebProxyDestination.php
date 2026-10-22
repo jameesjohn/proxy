@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Models;
+namespace Webong\Proxy\Models;
 
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,8 +16,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class WebProxyDestination extends Model
 {
     use HasUuids;
-
-    protected $table = 'web_proxy_destinations';
 
     public const string EXECUTION_CONTEXT_METADATA_KEY = '_execution_context';
 
@@ -53,6 +51,11 @@ class WebProxyDestination extends Model
             'last_delivered_at' => 'immutable_datetime',
             'last_failed_at' => 'immutable_datetime',
         ];
+    }
+
+    public function getTable(): string
+    {
+        return (string) config('proxy.tables.subscriptions', 'subscriptions');
     }
 
     /** @return BelongsTo<WebProxyEndpoint, $this> */

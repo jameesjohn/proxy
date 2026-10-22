@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use ReflectionClass;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use RuntimeException;
-use Webong\WebProxy\Attributes\WebhookRouter;
-use Webong\WebProxy\Attributes\WebhookTarget;
-use Webong\WebProxy\Contracts\Router;
-use Webong\WebProxy\Contracts\WebhookEvent;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Attributes\WebhookRouter;
+use Webong\Proxy\Attributes\WebhookTarget;
+use Webong\Proxy\Contracts\Router;
+use Webong\Proxy\Contracts\WebhookEvent;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
 
 final class WebhookDiscovery
 {
@@ -25,13 +25,13 @@ final class WebhookDiscovery
             throw new RuntimeException("Webhook target discovery root [{$path}] does not exist.");
         }
 
-        $configured = config('web-proxy.targets', []);
+        $configured = config('proxy.targets', []);
         $configured = is_array($configured) ? $configured : [];
         $targets = [
             'event' => is_array($configured['event'] ?? null) ? $configured['event'] : [],
             'job' => is_array($configured['job'] ?? null) ? $configured['job'] : [],
         ];
-        $routers = config('web-proxy.routers', []);
+        $routers = config('proxy.routers', []);
         $routers = is_array($routers) ? $routers : [];
 
         foreach ($this->phpFiles($path) as $file) {
@@ -87,7 +87,7 @@ final class WebhookDiscovery
         unset($typeTargets);
         ksort($targets);
         ksort($routers);
-        $output ??= base_path('bootstrap/cache/web-proxy.php');
+        $output ??= base_path('bootstrap/cache/proxy.php');
         $directory = dirname($output);
         if (! is_dir($directory) && ! mkdir($directory, 0755, true) && ! is_dir($directory)) {
             throw new RuntimeException("Unable to create webhook discovery cache directory [{$directory}].");

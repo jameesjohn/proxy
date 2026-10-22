@@ -5,6 +5,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.3 || ^8.4",
+        "guzzlehttp/guzzle": "^7.10",
         "illuminate/contracts": "^12.0",
         "illuminate/support": "^12.0",
         "spatie/laravel-webhook-client": "^3.5",
@@ -17,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Webong\\WebProxy\\": "src/"
+            "Webong\\Proxy\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Webong\\WebProxy\\Tests\\": "tests/"
+            "Webong\\Proxy\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -31,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Webong\\WebProxy\\WebProxyServiceProvider"
+                "Webong\\Proxy\\WebProxyServiceProvider"
             ]
         }
     },

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Models;
+namespace Webong\Proxy\Models;
 
 use Illuminate\Http\Request;
 use LogicException;
 use Spatie\WebhookClient\Models\WebhookCall;
 use Spatie\WebhookClient\WebhookConfig;
-use Webong\WebProxy\EndpointRecord;
-use Webong\WebProxy\EndpointWebhookConfig;
+use Webong\Proxy\EndpointRecord;
+use Webong\Proxy\EndpointWebhookConfig;
 
 class WebProxyCall extends WebhookCall
 {
@@ -27,7 +27,7 @@ class WebProxyCall extends WebhookCall
             if (is_array($endpointConfig->storeHeaders)) {
                 $endpointConfig->storeHeaders = array_values(array_unique([
                     ...$endpointConfig->storeHeaders,
-                    \Webong\WebProxy\Headers::ENDPOINT,
+                    \Webong\Proxy\Headers::ENDPOINT,
                 ]));
             }
 

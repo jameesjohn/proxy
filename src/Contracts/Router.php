@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
-use Webong\WebProxy\Models\WebProxyCall;
-use Webong\WebProxy\WebhookRoute;
+use Webong\Proxy\Models\WebProxyCall;
+use Webong\Proxy\WebhookRoute;
 
 interface Router
 {

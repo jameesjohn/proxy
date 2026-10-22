@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Tests\Support;
+namespace Webong\Proxy\Tests\Support;
 
 use Illuminate\Foundation\Queue\Queueable;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\WebhookProxyDelivery;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\WebhookProxyDelivery;
 
 final class TestWebhookJob implements WebhookJob
 {

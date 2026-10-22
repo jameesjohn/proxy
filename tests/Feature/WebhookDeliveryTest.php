@@ -5,14 +5,14 @@ declare(strict_types=1);
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Event;
 use Spatie\WebhookServer\CallWebhookJob;
-use Webong\WebProxy\Events\WebhookDeliveryFailed;
-use Webong\WebProxy\Events\WebhookDeliverySucceeded;
-use Webong\WebProxy\Headers;
-use Webong\WebProxy\Jobs\ForwardWebhookJob;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Tests\Support\WebhookFixtures;
-use Webong\WebProxy\WebProxy;
-use Webong\WebProxy\WebProxyRegistryManager;
+use Webong\Proxy\Events\WebhookDeliveryFailed;
+use Webong\Proxy\Events\WebhookDeliverySucceeded;
+use Webong\Proxy\Headers;
+use Webong\Proxy\Jobs\ForwardWebhookJob;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Tests\Support\WebhookFixtures;
+use Webong\Proxy\WebProxy;
+use Webong\Proxy\WebProxyRegistryManager;
 
 it('signs request deliveries and reports success', function (): void {
     $endpoint = WebhookFixtures::endpoint(externalId: 'signed-delivery');
@@ -63,7 +63,7 @@ it('signs request deliveries and reports success', function (): void {
 });
 
 it('forwards without a proxy signature when no secret is configured', function (): void {
-    config()->set('web-proxy.secret', '');
+    config()->set('proxy.secret', '');
 
     $endpoint = WebhookFixtures::endpoint(externalId: 'unsigned-delivery');
     $destination = WebhookFixtures::destination($endpoint);
@@ -94,7 +94,7 @@ it('forwards without a proxy signature when no secret is configured', function (
 });
 
 it('records and reports terminal request delivery failures', function (): void {
-    config()->set('web-proxy.log_failures', false);
+    config()->set('proxy.log_failures', false);
 
     $endpoint = WebhookFixtures::endpoint(externalId: 'failed-delivery');
     $destination = WebhookFixtures::destination($endpoint);

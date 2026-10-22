@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Contracts;
+namespace Webong\Proxy\Contracts;
 
-use Webong\WebProxy\Endpoint;
-use Webong\WebProxy\EndpointDefinition;
-use Webong\WebProxy\EndpointRecord;
+use Webong\Proxy\Endpoint;
+use Webong\Proxy\EndpointDefinition;
+use Webong\Proxy\EndpointRecord;
 
 interface EndpointRegistrar extends ExecutionContext
 {

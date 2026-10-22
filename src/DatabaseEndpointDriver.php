@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\EndpointDriver;
+use Webong\Proxy\Contracts\EndpointDriver;
 
 final class DatabaseEndpointDriver implements EndpointDriver
 {

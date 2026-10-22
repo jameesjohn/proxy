@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;

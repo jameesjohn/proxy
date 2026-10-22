@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Models;
+namespace Webong\Proxy\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
@@ -16,8 +16,6 @@ class WebProxyEndpoint extends Model
     use HasUuids;
 
     public const string REGISTRY_METADATA_KEY = '_registry';
-
-    protected $table = 'web_proxy_endpoints';
 
     protected $fillable = [
         'client',
@@ -43,9 +41,20 @@ class WebProxyEndpoint extends Model
         ];
     }
 
+    public function getTable(): string
+    {
+        return (string) config('proxy.tables.endpoints', 'endpoints');
+    }
+
     /** @return HasMany<WebProxyDestination, $this> */
     public function destinations(): HasMany
     {
         return $this->hasMany(WebProxyDestination::class, 'endpoint_id');
+    }
+
+    /** @return HasMany<ProxyProfile, $this> */
+    public function profiles(): HasMany
+    {
+        return $this->hasMany(ProxyProfile::class, 'endpoint_id');
     }
 }

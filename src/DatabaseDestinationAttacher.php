@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\WebhookEvent;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Models\WebProxyEndpoint;
+use Webong\Proxy\Contracts\WebhookEvent;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Models\WebProxyEndpoint;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use RuntimeException;

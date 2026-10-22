@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Tests;
+namespace Webong\Proxy\Tests;
 
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\WebhookClient\WebhookClientServiceProvider;
 use Spatie\WebhookClient\WebhookProfile\ProcessEverythingWebhookProfile;
 use Spatie\WebhookServer\WebhookServerServiceProvider;
-use Webong\WebProxy\Headers;
-use Webong\WebProxy\Jobs\ProcessWebhookJob;
-use Webong\WebProxy\Models\WebProxyCall;
-use Webong\WebProxy\Tests\Support\TestRouter;
-use Webong\WebProxy\Tests\Support\TestSignatureValidator;
-use Webong\WebProxy\Tests\Support\TestWebhookJob;
-use Webong\WebProxy\Tests\Support\TestWebhookResponse;
-use Webong\WebProxy\WebProxy;
-use Webong\WebProxy\WebhookProxyRouteDefinition;
-use Webong\WebProxy\WebProxyServiceProvider;
+use Webong\Proxy\Headers;
+use Webong\Proxy\Jobs\ProcessWebhookJob;
+use Webong\Proxy\Models\WebProxyCall;
+use Webong\Proxy\Tests\Support\TestRouter;
+use Webong\Proxy\Tests\Support\TestSignatureValidator;
+use Webong\Proxy\Tests\Support\TestWebhookJob;
+use Webong\Proxy\Tests\Support\TestWebhookResponse;
+use Webong\Proxy\WebProxy;
+use Webong\Proxy\WebhookProxyRouteDefinition;
+use Webong\Proxy\WebProxyServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -50,8 +50,8 @@ abstract class TestCase extends Orchestra
                 'prefix' => '',
                 'foreign_key_constraints' => true,
             ],
-            'web-proxy.base_url' => 'https://proxy.example.test',
-            'web-proxy.secret' => 'internal-forwarding-secret',
+            'proxy.base_url' => 'https://proxy.example.test',
+            'proxy.secret' => 'internal-forwarding-secret',
             'webhook-client.configs' => [[
                 'name' => 'test-router',
                 'signing_secret' => '',
@@ -64,7 +64,7 @@ abstract class TestCase extends Orchestra
                 'store_attachments' => false,
                 'process_webhook_job' => ProcessWebhookJob::class,
             ]],
-            'web-proxy.targets' => [
+            'proxy.targets' => [
                 'event' => [],
                 'job' => [
                     'test-webhook-job' => TestWebhookJob::class,

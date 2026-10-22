@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Events;
+namespace Webong\Proxy\Events;
 
-use Webong\WebProxy\WebhookProxyDelivery;
+use Webong\Proxy\WebhookProxyDelivery;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 

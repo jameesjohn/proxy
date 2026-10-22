@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 final readonly class WebhookBaseUrlResolver
 {
@@ -10,7 +10,7 @@ final readonly class WebhookBaseUrlResolver
     {
         foreach ([
             ...$candidates,
-            config('web-proxy.base_url'),
+            config('proxy.base_url'),
         ] as $candidate) {
             if (is_string($candidate) && mb_trim($candidate) !== '') {
                 return mb_rtrim($candidate, '/');

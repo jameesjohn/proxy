@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy\Tests\Support;
+namespace Webong\Proxy\Tests\Support;
 
-use Webong\WebProxy\Contracts\Router;
-use Webong\WebProxy\Models\WebProxyCall;
-use Webong\WebProxy\WebhookRoute;
+use Webong\Proxy\Contracts\Router;
+use Webong\Proxy\Models\WebProxyCall;
+use Webong\Proxy\WebhookRoute;
 
 final class TestRouter implements Router
 {

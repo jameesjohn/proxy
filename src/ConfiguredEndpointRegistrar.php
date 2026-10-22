@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use Closure;
-use Webong\WebProxy\Contracts\EndpointDriver;
-use Webong\WebProxy\Contracts\EndpointProvider;
-use Webong\WebProxy\Contracts\EndpointRegistrar;
+use Webong\Proxy\Contracts\EndpointDriver;
+use Webong\Proxy\Contracts\EndpointProvider;
+use Webong\Proxy\Contracts\EndpointRegistrar;
 
 final class ConfiguredEndpointRegistrar implements EndpointRegistrar
 {

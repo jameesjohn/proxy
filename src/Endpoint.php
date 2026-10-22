@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
-use Webong\WebProxy\Contracts\EndpointProvider;
+use Webong\Proxy\Contracts\EndpointProvider;
 
 final class Endpoint
 {
@@ -23,6 +23,16 @@ final class Endpoint
                 $definition->context,
             )),
         );
+    }
+
+    public function registerProfile(ProfileDefinition $definition): ProfileRecord
+    {
+        return $this->provider->registerProfile($this->record, $definition);
+    }
+
+    public function profile(string $name): ?ProfileRecord
+    {
+        return $this->provider->profile($this->record, $name);
     }
 
     public function callbackUrl(): string

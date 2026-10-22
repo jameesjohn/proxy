@@ -5,18 +5,18 @@ declare(strict_types=1);
 use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Event;
-use Webong\WebProxy\Contracts\WebhookEvent;
-use Webong\WebProxy\Contracts\WebhookJob;
-use Webong\WebProxy\DatabaseEndpointProvider;
-use Webong\WebProxy\DestinationDefinition;
-use Webong\WebProxy\DispatchWebhookProxyDestination;
-use Webong\WebProxy\Enums\WebhookProxyTargetType;
-use Webong\WebProxy\Jobs\ForwardWebhookJob;
-use Webong\WebProxy\Models\WebProxyDestination;
-use Webong\WebProxy\Tests\Support\WebhookFixtures;
-use Webong\WebProxy\WebhookProxyDelivery;
-use Webong\WebProxy\WebhookRoute;
-use Webong\WebProxy\WebProxy;
+use Webong\Proxy\Contracts\WebhookEvent;
+use Webong\Proxy\Contracts\WebhookJob;
+use Webong\Proxy\DatabaseEndpointProvider;
+use Webong\Proxy\DestinationDefinition;
+use Webong\Proxy\DispatchWebhookProxyDestination;
+use Webong\Proxy\Enums\WebhookProxyTargetType;
+use Webong\Proxy\Jobs\ForwardWebhookJob;
+use Webong\Proxy\Models\WebProxyDestination;
+use Webong\Proxy\Tests\Support\WebhookFixtures;
+use Webong\Proxy\WebhookProxyDelivery;
+use Webong\Proxy\WebhookRoute;
+use Webong\Proxy\WebProxy;
 
 it('routes to every destination matching the route', function (): void {
     $endpoint = WebhookFixtures::endpoint(externalId: 'multiple-destinations');
@@ -107,7 +107,7 @@ it('filters destinations by opaque metadata', function (): void {
 });
 
 it('dispatches event and job destinations', function (): void {
-    config()->set('web-proxy.targets', [
+    config()->set('proxy.targets', [
         'event' => [PackageWebhookEvent::class => PackageWebhookEvent::class],
         'job' => [PackageWebhookJob::class => PackageWebhookJob::class],
     ]);

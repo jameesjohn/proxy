@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webong\WebProxy;
+namespace Webong\Proxy;
 
 use BackedEnum;
 use Illuminate\Routing\Route as RoutingRoute;
@@ -34,7 +34,7 @@ class EndpointUrlGenerator
         $baseUrl = (string) Arr::get(
             $endpoint->metadata,
             'base_url',
-            config('web-proxy.base_url'),
+            config('proxy.base_url'),
         );
         $payload = Context::getHidden(WebhookContextKeys::EXECUTION_PAYLOAD->value);
         $routeParameters = $payload instanceof WebhookExecutionContextPayload
